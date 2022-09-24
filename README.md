@@ -8,9 +8,9 @@ v-sales-order-05-finall(包括两个参数，drill down,data collapse,cell backg
 
 v-sales-order-06-page-break(page break报表,split data to multiple sheet by country name)
 
-test-02-muti-parameter
+test-02-muti-parameter(多参数报表）
 
-matrix-01
+matrix-01(矩阵报表)
 
 product-detail(this report for drill down)
 
