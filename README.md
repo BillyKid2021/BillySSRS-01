@@ -2,7 +2,7 @@
 
 SSRS Workshop Report
 
-这是数据仓库SSRS Workshop报表，我已经做了四个报表：
+这是数据仓库SSRS Workshop报表，我已经做了四个报表,database is DDS：
 
 v-sales-order-05-finall(包括两个参数，drill down,data collapse,cell background color changed base on condition(margin value>200),sorting)
 
