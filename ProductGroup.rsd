@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>DDS</DataSourceReference>
+      <CommandText>SELECT dim_customer.name, dim_customer.country, dim_customer.city, dim_date.date, dim_date.day_name, dim_date.month, dim_date.year, dim_product.name AS Expr1, dim_product.description, fact_product_sales.line_number, 
+                  fact_product_sales.order_id, fact_product_sales.unit_cost, fact_product_sales.quantity, fact_product_sales.margin, fact_product_sales.unit_price, fact_product_sales.sales_value, fact_product_sales.sales_cost
+FROM     dim_customer INNER JOIN
+                  fact_product_sales ON dim_customer.customer_key = fact_product_sales.customer_key INNER JOIN
+                  dim_date ON fact_product_sales.sales_date_key = dim_date.date_key INNER JOIN
+                  dim_product ON fact_product_sales.product_key = dim_product.product_key</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="name">
+        <DataField>name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="country">
+        <DataField>country</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="city">
+        <DataField>city</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="date">
+        <DataField>date</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="day_name">
+        <DataField>day_name</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="month">
+        <DataField>month</DataField>
+        <rd:TypeName>System.Byte</rd:TypeName>
+      </Field>
+      <Field Name="year">
+        <DataField>year</DataField>
+        <rd:TypeName>System.Int16</rd:TypeName>
+      </Field>
+      <Field Name="Expr1">
+        <DataField>Expr1</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="description">
+        <DataField>description</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="line_number">
+        <DataField>line_number</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="order_id">
+        <DataField>order_id</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="unit_cost">
+        <DataField>unit_cost</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="quantity">
+        <DataField>quantity</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="margin">
+        <DataField>margin</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="unit_price">
+        <DataField>unit_price</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="sales_value">
+        <DataField>sales_value</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="sales_cost">
+        <DataField>sales_cost</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
